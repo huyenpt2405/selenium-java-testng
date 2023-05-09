@@ -1,12 +1,10 @@
 package webdriver;
 
-import java.util.Collections;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -27,10 +25,7 @@ public class Topic_13_Action_Part1 {
 			System.setProperty("webdriver.chrome.driver", projectPath + "/browserDrivers/chromedriver");
 		}
  
-		ChromeOptions chromeOptions = new ChromeOptions();
-		chromeOptions.setExperimentalOption("useAutomationExtension", false);
-		chromeOptions.setExperimentalOption("excludeSwitches",Collections.singletonList("enable-automation"));    
-		driver = new ChromeDriver(chromeOptions);
+		driver = new ChromeDriver();
 		actions = new Actions(driver);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
