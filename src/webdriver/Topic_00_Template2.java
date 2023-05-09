@@ -8,7 +8,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class Topic_00_Template {
+public class Topic_00_Template2 {
 	WebDriver driver;
 	String projectPath = System.getProperty("user.dir");
 	String osName = System.getProperty("os.name");
@@ -27,18 +27,18 @@ public class Topic_00_Template {
 	}
 
 	@Test
-	public void TC_01_Url() {
-		// To do
+	public void TC_01_Tooltip() {
+		
 	}
 
 	@Test
-	public void TC_02_Logo() {
-		// To do
+	public void TC_02_Menu() {
+		
 	}
 
 	@Test
-	public void TC_03_Form() {
-		// To do
+	public void TC_03_Menu() {
+		
 	}
 
 	@AfterClass
