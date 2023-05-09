@@ -108,7 +108,7 @@ public class Topic_07_TextBox_TextArea {
 		sleepInSecond(8);
 
 		driver.findElement(By.cssSelector("i.bi-pencil-fill")).click();
-		sleepInSecond(20);
+		sleepInSecond(5);
 
 		Assert.assertEquals(driver
 				.findElement(By.xpath("//label[contains(text(), 'Number')]/parent::div/following-sibling::div/input"))
@@ -151,7 +151,7 @@ public class Topic_07_TextBox_TextArea {
 
 	public void sleepInSecond(long timeInSecond) {
 		try {
-			Thread.sleep(timeInSecond);
+			Thread.sleep(timeInSecond * 1000);
 		} catch (InterruptedException e) {
 			// TODO: handle exception
 			e.getStackTrace();
