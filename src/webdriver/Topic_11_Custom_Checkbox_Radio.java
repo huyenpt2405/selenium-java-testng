@@ -21,15 +21,13 @@ public class Topic_11_Custom_Checkbox_Radio {
 
 	@BeforeClass
 	public void beforeClass() {
-//		if (osName.contains("Windows")) {
-//			System.setProperty("webdriver.chrome.driver", projectPath + "\\browserDrivers\\chromedriver.exe");
-//		} else {
-//			System.setProperty("webdriver.chrome.driver", projectPath + "/browserDrivers/chromedriver");
-//		}
-// 
-//		driver = new ChromeDriver();
-		System.setProperty("webdriver.edge.driver", projectPath + "\\browserDrivers\\msedgedriver.exe");
-		driver = new EdgeDriver();
+		if (osName.contains("Windows")) {
+			System.setProperty("webdriver.chrome.driver", projectPath + "\\browserDrivers\\chromedriver.exe");
+		} else {
+			System.setProperty("webdriver.chrome.driver", projectPath + "/browserDrivers/chromedriver");
+		}
+ 
+		driver = new ChromeDriver();
 		jsExcutor = (JavascriptExecutor) driver;
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
