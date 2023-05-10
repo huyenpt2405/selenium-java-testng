@@ -63,7 +63,7 @@ public class Topic_10_Button_Checkbox_Radio_Button {
 	public void TC_02_Default_Checkbox_Radio() {
 		driver.get("https://demos.telerik.com/kendo-ui/checkbox/index");
 
-		scrollToPosition(526, 300);
+		scrollIntoView(driver.findElement(By.xpath("//label[text()='Dual-zone air conditioning']/preceding-sibling::input")));
         WebElement optionEl = driver.findElement(By.xpath("//label[text()='Dual-zone air conditioning']/preceding-sibling::input"));
 		optionEl.click();
 		sleepInSecond(1);
@@ -72,7 +72,7 @@ public class Topic_10_Button_Checkbox_Radio_Button {
 		Assert.assertFalse(optionEl.isSelected());
 		
 		driver.get("https://demos.telerik.com/kendo-ui/radiobutton/index");
-		scrollToPosition(526, 300);
+		scrollIntoView(driver.findElement(By.xpath("//label[text()='2.0 Petrol, 125kW']/preceding-sibling::input")));
 		WebElement expectedRadio = driver.findElement(By.xpath("//label[text()='2.0 Petrol, 125kW']/preceding-sibling::input"));
 		Assert.assertFalse(expectedRadio.isEnabled());
 	}
@@ -115,9 +115,9 @@ public class Topic_10_Button_Checkbox_Radio_Button {
         
 	}
 	
-	public void scrollToPosition(int x, int y) {
+	public void scrollIntoView(WebElement element) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript(String.format("javascript:window.scrollBy(%o, %o)", x, y));
+        js.executeScript("arguments[0].scrollIntoViewIfNeeded({behavior: 'auto', block: 'center', inline: 'center'});", element);
 	}
 
 	@Test

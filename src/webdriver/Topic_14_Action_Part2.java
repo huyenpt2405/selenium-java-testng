@@ -41,7 +41,7 @@ public class Topic_14_Action_Part2 {
 		List<WebElement> listNumber = driver.findElements(By.cssSelector("ol#selectable>li"));
 
 		actions.clickAndHold(listNumber.get(0)).moveToElement(listNumber.get(7)).release().perform();
-//		sleepInSecond(10);
+		sleepInSecond(4);
 
 		List<WebElement> listSelectedItem = driver.findElements(By.cssSelector("ol#selectable li.ui-selected"));
 		Assert.assertEquals(listSelectedItem.size(), 8);
