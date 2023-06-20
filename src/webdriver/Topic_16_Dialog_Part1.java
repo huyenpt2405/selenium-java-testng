@@ -63,8 +63,6 @@ public class Topic_16_Dialog_Part1 {
 		driver.get("https://skills.kynaenglish.vn/");
 		
 		By loginPopup = By.cssSelector("div#k-popup-account-login");
-//		Assert.assertEquals(driver.findElements(loginPopup).size(), 0);
-		
 		
 		// Verify undisplayed
 		Assert.assertFalse(driver.findElement(loginPopup).isDisplayed());
@@ -86,12 +84,6 @@ public class Topic_16_Dialog_Part1 {
 		
 		// Verify undisplayed
 		Assert.assertFalse(driver.findElement(loginPopup).isDisplayed());
-//		Assert.assertEquals(driver.findElements(loginPopup).size(), 0);
-	}
-
-	@Test
-	public void TC_03_Menu() {
-		
 	}
 
 	@AfterClass

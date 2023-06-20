@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 
-public class Topic_01_Assert {
+public class Topic_02_Assert {
 	
 	public static void main(String[] args) {
 		

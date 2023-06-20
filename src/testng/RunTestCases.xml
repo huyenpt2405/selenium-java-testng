@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="tests" name="Suite" thread-count="2">
+	<test name="Test">
+		<!--
+		<classes>
+			<class name="testng.Topic_01_Annotations" />
+		</classes>
+		-->
+
+		<!--
+		<packages>
+			<package name="tiki.admin" />
+		</packages>
+		<groups>
+			<run>
+				<include name="product"  />
+			</run>
+		</groups>
+		-->
+
+	</test>
+	<parameter name="environment" value="live"></parameter>
+	<test name="Run on Chrome">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="testng.Topic_06_Parameter_Environment" />
+		</classes>
+	</test>
+	<test name="Run on Edge">
+		<parameter name="browser" value="edge" />
+		<classes>
+			<class name="testng.Topic_06_Parameter_Environment" />
+		</classes>
+	</test>
+</suite>
