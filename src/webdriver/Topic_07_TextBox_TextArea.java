@@ -8,7 +8,6 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -98,7 +97,7 @@ public class Topic_07_TextBox_TextArea {
 
 		driver.findElement(By.xpath("//h6[text()='Assigned Immigration Records']/following-sibling::button")).click();
 		sleepInSecond(2);
-		
+
 		driver.findElement(By.xpath("//label[contains(text(), 'Number')]/parent::div/following-sibling::div/input"))
 				.sendKeys(passportNumber);
 		driver.findElement(
@@ -157,7 +156,6 @@ public class Topic_07_TextBox_TextArea {
 			e.getStackTrace();
 		}
 	}
-
 
 	@AfterClass
 	public void afterClass() {
